@@ -1,8 +1,12 @@
+"use client"
 import { purchases } from '../../data/purchases';
+import { useParams } from 'next/navigation';
 import Link from 'next/link';
 
-export default function ReadPage({ params }: { params: { id: string } }) {
-  const purchase = purchases.find(p => p.id === parseInt(params.id));
+export default function ReadPage() {
+  const params = useParams();
+  const id = typeof params.id === 'string' ? parseInt(params.id) : null;
+  const purchase = purchases.find(p => p.id === id);
 
   if (!purchase) {
     return <div>Purchase not found</div>;
