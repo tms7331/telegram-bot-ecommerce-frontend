@@ -9,9 +9,6 @@ export default function ThankYou() {
         <Link href="/store" className="block bg-blue-500 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-600 transition-colors">
           Back to Store
         </Link>
-        <Link href="/reader" className="block bg-purple-500 text-white px-6 py-2 rounded-lg font-semibold hover:bg-purple-600 transition-colors">
-          Go to Your Purchases
-        </Link>
       </div>
     </div>
   )
